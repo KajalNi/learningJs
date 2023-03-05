@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img1" width="500px" src="image1.jpg">
+    <script>
+        //here we have selected a heavy image 
+        window.addEventListener('DOMContentLoaded',function(){
+            console.log('DOM tree is created');//when it will don't get fully loaded then we will see this ,message
+        });
+        // window.addEventListener('load',function(){
+        //     console.log('fully loaded');//
+        // });
+
+        //if the image will be about 1.2mb or few mbs then both of them will get execute simaltaneouly
+        //but here the image is about 12 mb then it will first "dom tree will get created and after sometimes when the whole 
+        // whole image will get load then addEventListener('load')" will get executed
+
+        //if we want then w can use load fun on any particular element as well right now will will load only when all other external css,javascript will get load 
+        //but right now we want this to get load when this image will get fully loaded
+
+        let img = document.getElementById('img1')
+        img.addEventListener('load',function(){
+            console.log('done');
+        })
+
+    </script>
+</body>
+</html>

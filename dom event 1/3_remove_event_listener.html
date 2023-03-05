@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <script>
+        //here we will use 2 click events on same element
+        let btn = document.getElementById('btn')
+        //here we will use external function and not anonymous fun
+        function click1(){
+            console.log('click1 activated');
+        }
+        function click2(){
+            console.log('click2 activated');
+        }
+        //now we want to register both funtions to get activated while clicking
+        btn.addEventListener('click',click1);
+        btn.addEventListener('click',click2);
+        //both of them will get activated together once it is being clicked
+
+        //we want to remove here 'eventlistener' and we can do it only
+        //if we have used addEventlistener and we haven't use an anonymous function
+        //that is when we will use external function
+
+
+        //here we want to remove click2
+        btn.removeEventListener('click',click2);//here also we have to pass 2 parameter
+        //1st one is 'event' and the 2nd one is the function that we want to remove
+
+    </script>
+</body>
+</html>

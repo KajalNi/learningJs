@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onclick="btnClick()">Click Me</button><!--here the function is passed-->
+    <button id="btn2">Enter </button>
+    <script>
+        function btnClick(){
+            alert("hope you are fine");
+        } // when we use inline click event we write (onclick in it and we passes a function )
+        //we can do it in another way as well which is called addEventListener
+        let btn = document.getElementById('btn2');
+        btn.addEventListener("click",btnClick)//here first we have to mention about the event that is going to happen
+        // and the 2nd one the function needs to get activated
+
+        //we can also do this with the help of anonymous function
+        // btn.addEventListener('click', function(){
+        //     alert('btn was clicked'); //if you want this to work only for one time then you can use anonymous function
+        // })
+
+
+    </script>
+</body>
+</html>

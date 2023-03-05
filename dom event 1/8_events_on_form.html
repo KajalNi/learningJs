@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- here we will talk about focus or blur events in form -->
+    <!-- in input field of form when you click on the input text-area it gets highlight
+    with solid black border and when you start typing something will will agian comes to it's natural form -->
+    <form action=""> 
+        <input type="text" id="myInput">
+    </form>
+    <script>
+        //here we will change the color of input area when a user will clicks on it to yellow
+        let x = document.getElementById('myInput');
+        x.addEventListener('focus',myFocusFunction);
+        x.addEventListener('blur',myBlurFunction);
+
+        function myFocusFunction(){
+            x.style.background = 'pink';
+        }
+        function myBlurFunction(){
+            x.style.background = 'white';
+        }
+        //if we want to get the value or when value get changed in input area
+        //we can use (change) addeventlistener in it
+        // x.addEventListener('change',function(){
+        //     console.log(this.value); //we'll get the value whatever the user has typed
+       // })
+        //we will use input addeventlistener function whenever we will press any key it will start detecting it
+        x.addEventListener('input',function(){
+            console.log(this.value);
+        })
+
+    </script>
+</body>
+</html>

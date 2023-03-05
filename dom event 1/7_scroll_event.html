@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>\
+    <style>
+        body{
+            height:2000px ;
+        }
+    </style>
+</head>
+<body>
+    <!-- we will talk about scroll event it fires when the document view has been scrolledd. -->
+    <h1>Namastey</h1>
+    <script>
+        // window.addEventListener('scroll',function(){   //we will write here window cause scrolling is happen in the whole window 
+        //     console.log('scrolling...')
+       // });
+        //now we want to detect whether it is scrolled up or scrolled down
+        //for that we use (wheel)
+
+        window.addEventListener('wheel',function(event){  //here we will pass a variable which will store all information
+            if(event.deltaY < 0){
+                console.log('scrolling up...');
+            }else if(event.deltaY >0){
+                console.log('scrolling down...');
+            }
+
+         });
+        //this event is an object and it has some properties like deltaY which is used vertical scrolling
+        //and deltaX when it is horizontal scrolling
+
+
+        //if you want to do something like when we have scrolled upto certain pixels we want soemthing to happen
+        //here we can change the color of page when it is scrolled down upto 150px
+
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset > 250){
+                document.body.style.background = "tomato";
+            }else{
+                document.body.style.background = 'white';
+            }
+        })
+           
+    </script>
+</body>
+</html>

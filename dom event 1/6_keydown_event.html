@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            background-color: rgb(168, 27, 50);
+            height:100px ;
+            width:100px ;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        //the keydown event is fired when a key is pressed.
+        //the keydown event is fired for all keys
+        //it will work on the whole window,and it's not only on some particular elements
+        window.addEventListener('keydown',checkkey);
+
+        function checkkey(event){
+            console.log(event.key)
+        }
+    </script>
+
+</body>
+</html>
